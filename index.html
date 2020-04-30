@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vue Todo</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="main-container" id="app">
+      <div class="list-container">
+        <div class="list-header">ギークサロン</div>
+        <div class="input-todo" v-for="(item, index) in items">
+          {{item}}
+          <button class="input-button" v-on:click="deleteCard(index)">Delete</span>
+        </div>
+        <div class="list-footer">
+          <div class="input-container">
+            <input type="text" class="input-todo" v-model="messege" />
+            <div class="input-button" v-on:click="addCard">
+              {{add}}
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 省略 -->
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="main.js"></script>
+  </body>
+</html>
